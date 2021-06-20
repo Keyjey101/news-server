@@ -1,0 +1,32 @@
+<%- include("partials/header") -%>
+
+  <div class="news" id="heading" style="display: flex; align-items: center; justify-content: center;">
+    <h1> News List </h1>
+  </div>
+<div style='margin-bottom: 20px; display: flex; align-items: flex-end; justify-content: flex-end;'>
+<button><a href="http://localhost:5000/api/user/registration" style="color: inherit;text-decoration: none;">Registration</a></button>
+<button><a href="http://localhost:5000/api/user/login" style="color: inherit;text-decoration: none;"> Login</a></button>
+<button><a href="http://localhost:5000/api/user/logout" style="color: inherit;text-decoration: none;"> Logout</a></button>
+</div>
+<div><button><a href="http://localhost:5000/api/news/create" style="color: inherit; text-decoration: none;">Create News</a> </button></div>
+
+   <div class='news-container' style="margin: 5% 15%">
+       
+        <%newsList.forEach((news) => {%>
+            <div class="news">   
+    
+    <h2 style='margin-bottom: 5px;'>   <%=news.title%>   </h2>
+    <a href="http://localhost:5000/api/news/<%=news._id%>" style="color: inherit;text-decoration: none;"><span>Click to read more</span></a>
+            </div>
+        <%})%>
+   
+    
+       
+    
+    
+  
+      
+      
+  </div>
+
+<%- include("partials/footer") -%>

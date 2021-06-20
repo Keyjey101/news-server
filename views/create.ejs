@@ -1,0 +1,20 @@
+<%- include("partials/header") -%>
+
+  <div class="heading" id="heading" style='margin: 5% auto 5%;display: flex; align-items: center; justify-content: center;'>
+    <h1> Create your own news </h1>
+  </div>
+  <div style='margin: 5% auto 5%;display: flex; align-items: flex-start; justify-content: flex-start;' >
+  <button> <a href="http://localhost:5000/api/news" style='text-decoration: none;color: inherit;'> Back to News-List</a></button>
+</div>
+  <div class="box" style="display: flex; align-items: center; justify-content: center;">
+   
+      <form class="news" action="http://localhost:5000/api/news/create" method="post">
+        <div class='title-placeholder' style='margin: 1% auto'>
+        <input type="text" name="newsTitle" placeholder="Title"  autocomplete="off" required>  </div>
+    <div class='content-placeholder'>
+        <textarea rows="12" cols="50" type="text" name="newsContent" placeholder="Write something"  autocomplete="off" required></textarea></div>
+            <div> <button class='add-button' type="submit" >Add News</button></div>
+      </form>
+  </div>
+
+<%- include("partials/footer") -%>

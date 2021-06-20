@@ -1,0 +1,34 @@
+<%- include("partials/header") -%>
+<div style="display: flex; align-items: center; justify-content: center;">
+<h1><%=news.title%></h1></div>
+
+<div style='margin-bottom: 20px; display: flex; align-items: flex-end; justify-content: flex-end;'>
+   
+    <button><a href="http://localhost:5000/api/news" style="color: inherit;text-decoration: none;"> Back</a></button>
+    <button><a href="http://localhost:5000/api/user/logout" style="color: inherit;text-decoration: none;"> Logout</a></button>
+    </div>
+
+
+<div style="display: flex; align-items: center; justify-content: center; margin: 2% 10%">
+<p><%=news.content%></p>
+</div>
+<% if (isAuthor) { %>
+    <div style="display: flex; align-items: center; justify-content: center; margin: 2% 10%">
+    <form class="news" action="http://localhost:5000/api/news/edit/<%=news._id%>" method="get">
+        <button type="submit" >Edit</button>
+    </form>
+    
+   
+        <form class="news" action="http://localhost:5000/api/news/<%=news._id%>" method="post">
+            <button type="submit" >Delete</button>
+        </form>
+        </div>
+
+    
+        <%}%>
+
+
+
+
+
+<%- include("partials/footer") -%>

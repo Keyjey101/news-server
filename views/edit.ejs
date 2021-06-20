@@ -1,0 +1,17 @@
+<%- include("partials/header") -%>
+
+<div class="box" style="display: flex; align-items: center; justify-content: center;">
+    <h1>Edit Page</h1>
+    </div>
+    <button><a href="http://localhost:5000/api/news" style="color: inherit;text-decoration: none;"> Back</a></button>
+    <div style="display: flex; align-items: center; justify-content: center;">
+          <form class="news" action="http://localhost:5000/api/news/edit/<%=news._id%>" method="post">
+             
+            <input type="text" name="newsTitle" placeholder="<%=news.title%>"  autocomplete="off" required>  
+            <div>
+              <textarea rows="12" cols="50" type="text" name="newsContent" placeholder="Write something"  autocomplete="off" required><%=news.content%></textarea>
+          </div>
+            <button type="submit" >Edit News</button>
+          </form>
+      </div>
+      <%- include("partials/footer") -%>

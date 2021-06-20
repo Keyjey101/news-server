@@ -1,0 +1,22 @@
+<%- include("partials/header") -%>
+  <div class="box" id="heading" style="display: flex; align-items: center; justify-content: center;">
+    <h1> Registration Page</h1>
+  </div>
+  <div style='display: flex; align-items: flex-end; justify-content: flex-end'>
+    <button><a href="http://localhost:5000/api/news"style="color: inherit; text-decoration: none;"> Back</a></button>
+    <button><a href="http://localhost:5000/api/user/login" style="color: inherit;text-decoration: none;"> Login</a></button>
+</div>
+  <div class="box" style="display: flex; align-items: center; justify-content: center; margin: 20% auto">
+  
+      <form class="news" action="http://localhost:5000/api/user/registration" method="post">
+        <div style='margin: 5%'>
+        <input type="email" name="email" placeholder="your mail"  autocomplete="off" required>  </div>
+        <div style='margin: 5%'> <input type="password" name="password" placeholder="password"  autocomplete="off" required></div>
+        <div style='margin: 5%'>  <button type="submit" name="news">Registration</button></div>
+       </form>
+       
+    </div>
+      
+  
+
+    <%- include("partials/footer") -%>
